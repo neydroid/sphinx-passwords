@@ -7,7 +7,7 @@ A command line password generator implemented in Rust
 
 ## To do
 
-- [ ] Use colors in terminal
+- [x] Use colors in terminal
 - [ ] Copy the generated password to clipboard
 - [ ] Binaries for Linux, OSX and Windows
 - [ ] Tests in Rust!
