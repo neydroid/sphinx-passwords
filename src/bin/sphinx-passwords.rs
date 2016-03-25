@@ -5,7 +5,7 @@ extern crate random_things;
 extern crate clipboard;
 
 use rand::{Rng};
-use argparse::{ArgumentParser, Store};
+use argparse::{ArgumentParser, StoreTrue, Store};
 use ansi_term::Colour;
 use random_things::random_string;
 use clipboard::ClipboardContext;
@@ -15,13 +15,15 @@ fn main() {
     let minimum_length = 10;
     let warning_message = Colour::Red.paint("WARNING: Password length should be at least: ");
     let password:String;
+    let mut silently = false;
 
     {  // this block limits scope of borrows by ap.refer() method
         let mut ap = ArgumentParser::new();
         ap.set_description("This tool generates a random password and copies it to clipboard");
         ap.refer(&mut length)
-        .add_option(&["-l", "--length"], Store,
-        "Length of password, defaults to a random length between 10 and 20");
+        .add_option(&["-l", "--length"], Store, "Sets the length of password, defaults to a random length between 10 and 20");
+        ap.refer(&mut silently)
+        .add_option(&["-s"], StoreTrue, "Mutes all messages, only returns the password");
         ap.parse_args_or_exit();
     }
 
