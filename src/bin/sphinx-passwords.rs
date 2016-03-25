@@ -23,7 +23,7 @@ fn main() {
     }
 
     if length < minimum_length {
-        println!("{}{}", warning_message, Colour::Red.paint(length.to_string()));
+        println!("{}{}", warning_message, Colour::Red.paint(minimum_length.to_string()));
     }
 
     println!("Generated password of length: {}", Colour::Green.paint(length.to_string()));
