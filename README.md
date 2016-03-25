@@ -8,6 +8,6 @@ A command line password generator implemented in Rust
 ## To do
 
 - [x] Use colors in terminal
-- [ ] Copy the generated password to clipboard
+- [x] Copy the generated password to clipboard
 - [ ] Binaries for Linux, OSX and Windows
 - [ ] Tests in Rust!
