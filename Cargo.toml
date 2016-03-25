@@ -1,0 +1,6 @@
+[package]
+name = "sphinx-passwords"
+version = "0.1.0"
+authors = ["José Ney Guerrero <joseneyguerrero@gmail.com>"]
+
+[dependencies]
