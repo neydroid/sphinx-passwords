@@ -6,3 +6,4 @@ authors = ["José Ney Guerrero <joseneyguerrero@gmail.com>"]
 [dependencies]
 argparse = "0.2.1"
 rand = "0.3.14"
+ansi_term = "0.7"
