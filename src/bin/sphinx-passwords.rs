@@ -18,7 +18,7 @@ fn main() {
 
     {  // this block limits scope of borrows by ap.refer() method
         let mut ap = ArgumentParser::new();
-        ap.set_description("This tool generates a random password");
+        ap.set_description("This tool generates a random password and copies it to clipboard");
         ap.refer(&mut length)
         .add_option(&["-l", "--length"], Store,
         "Length of password, defaults to a random length between 10 and 20");
